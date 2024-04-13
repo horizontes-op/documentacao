@@ -10,5 +10,5 @@ gh repo clone horizontes-op/instituicao-resource
 gh repo clone horizontes-op/recomendacao
 gh repo clone horizontes-op/aluno-resource
 gh repo clone horizontes-op/auth-resource
-gh repo clone horizontes-op/recomedacao-resource
+gh repo clone horizontes-op/recomendacao-resource
 gh repo clone horizontes-op/docker-compose

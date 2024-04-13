@@ -35,7 +35,7 @@ Microsserviço responsável por gerenciar as recomendações (matchs) entre um a
 
 [Interface recomendação](https://github.com/horizontes-op/recomendacao) 
 
-[Implementação recomendação](https://github.com/horizontes-op/recomedacao-resource)
+[Implementação recomendação](https://github.com/horizontes-op/recomendacao-resource)
 
 
 ## Microsserviços que serão incorporados no futuro

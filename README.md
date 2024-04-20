@@ -70,6 +70,11 @@ Microsserviço que recebe uma requisição interna e redireciona para o microsse
 
 [Implementação discovery](https://github.com/horizontes-op/discovery)
 
+### Jenkins 
+Ferramenta utilizada para a implementação contínua, integração contínua e entrega contínua (CI/CD). Utilizamos para automatizar o deploy da aplicação. 
+
+[Docker que roda o jenkins](https://github.com/horizontes-op/jenkins)
+
 ### Para rodar o projeto
 
 Nesse projeto foi utilizado o docker compose para criar um ambiente mais próximo de uma implementação em produção, permitindo a execução de todos esses microsserviços em uma rede privada criada pelo docker, em que só o gateway precisa estar visível para máquinas externas. O repositório abaixo apresenta o docker compose utilizado: 

@@ -12,6 +12,15 @@ Interface - Responsável por guardar as rotas que estão presentes no microsserv
 
 Implementação - Implementação do microsserviço de fato, onde é realizado o contato com o banco de dados e aplicadas as lógicas de negócio. 
 
+## Organização de branchs
+
+Existem duas branches principais nos projetos, a main e a deploy. 
+
+
+A main é a branch principal para densenvolvimento, então todas as novas alterações são inseridas nela e ela é configurada para que o microsserviço possa ser rodado localmente na máquina ou em um docker compose local. 
+
+A branch deploy apresenta configurações usadas para subir o microsserviço na cloud e tem as alterações realizadas na main depois de maturadas. Foi utilizado o pipeline jenkins e o EKS da AWS para realizar esse deploy automatizado.
+
 
 ## Microsserviços essenciais
 
@@ -31,11 +40,16 @@ Microsserviço responsável por gerenciar as informações das instituições e 
 [Implementação aluno](https://github.com/horizontes-op/aluno-resource)
 
 ### Recomendação
-Microsserviço responsável por gerenciar as recomendações (matchs) entre um aluno e uma instituição parceira cadastrada na plataforma. Esse microsserviço recebe o id de um aluno cadastrado na base de dados, envia um request para a API do chatGPT, salva e apresenta as instituições recomendadas para o usuário final. O microserviço de recomendação conta com: 
+Microsserviço responsável por gerenciar as recomendações (matchs) entre um aluno e uma instituição parceira cadastrada na plataforma. Esse microsserviço recebe o id de um aluno cadastrado na base de dados, utiliza a api de embeedings da OpenAI e retorna as k instituições com maior match (por uma busca por similaridade vetorial) com o aluno, salvando no BD. Esse microsserviço foi implementado python (fastapi). Também foi desenvolvida uma versão dela para o POC usando a api do chatGPT, disponivel abaixo.
+
+[Implementação recomendação python](https://github.com/horizontes-op/recomendacao-python-v2)
+
+
+#### versão antiga (para  a POC)
 
 [Interface recomendação](https://github.com/horizontes-op/recomendacao) 
 
-[Implementação recomendação](https://github.com/horizontes-op/recomendacao-resource)
+[Implementação recomendação em java](https://github.com/horizontes-op/recomendacao-resource)
 
 
 ## Microsserviços que serão incorporados no futuro
